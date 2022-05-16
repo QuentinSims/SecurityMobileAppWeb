@@ -1,41 +1,20 @@
 ﻿@{
     ViewData["Title"] = "Location of Users";
 }
-<head>
-    <title>Location of all users</title>
-    <script src=~/lib/jquery/dist/jquery.min.js></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR3VwnwpXSoBIKVqNaI2qM7UZ-5QG577k&callback=initMap"></script>
-    <script type="text/javascript">
-    function initialize() {
-
-        var canvas = $("#map_canvas");
-
-        var latitude = 35.78334;
-        var longitude = 51.42511;
-
-        var latlng = new google.maps.LatLng(latitude, longitude);
-        var options = {
-            zoom: 8,
-            center: latlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(canvas[0], options);
-
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(latitude, longitude),
-            map: map
-        });
-    }
-
-    $(function () {
-        initialize();
-    });
-
-  </script>
-</head>
-<body>
-    <h1>Location of all users</h1>
-    <div style="width: 100%; height: 100%">
-        <div id="map_canvas" style="width:100%; height:100%; margin-left:100px"></div>
+<div class="row">
+    <div class="col">
+        Location of all users
+        <div id="map" style="height:500px; width:1000px"></div>
+        <script>
+            var map;
+            function initMap(){
+                map = new google.maps.Map(document.getElementById('map'),{
+                    center: {lat: 33.9698, lng: 25.4937 },
+                    zoom: 8
+                });
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOkL7eEkfIR3hoVijVURp4PzXgSRFWiaM&callback=initMap" async defer>
+            </script>
     </div>
-</body>
+</div>
