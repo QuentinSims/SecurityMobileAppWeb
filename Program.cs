@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
+using SecurityMobileAppWeb.Services.Incidents;
+using SecurityMobileAppWeb.Services.Locations;
+using SecurityMobileAppWeb.Services.Notes;
 
 var builder = WebApplication.CreateBuilder(args);
 
