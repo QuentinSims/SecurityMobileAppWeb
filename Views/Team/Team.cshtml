@@ -3,3 +3,32 @@
 }
 
 <h1>All the teams and team members</h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Email</th>
+                        <th>Team</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Q</td>
+                        <td>Q@gmail.com</td>
+                        <td>Alpha</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<button type="submit" class="btn btn-dark">
+    @Html.ActionLink("Home", "Index", "Home")
+</button>
+<button type="submit" class="btn btn-dark justify-content-end">
+    @Html.ActionLink("Add", "Index", "Home")
+</button>
+

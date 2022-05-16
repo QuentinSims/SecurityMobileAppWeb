@@ -3,3 +3,37 @@
 }
 
 <h1>Incidents of all users</h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Status</th>
+                        <th>Title</th>
+                        <th>Date of Incident</th>
+                        <th>Location of Incident</th>
+                        <th>Description of Incident</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1234</td>
+                        <td>Pending</td>
+                        <td>Important</td>
+                        <td>18 May</td>
+                        <td>lat: 33.9698, lng: 25.4937</td>
+                        <td>This is a very important note</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<button type="submit" class="btn btn-dark">
+    @Html.ActionLink("Home", "Index", "Home")
+</button>
+<button type="submit" class="btn btn-dark justify-content-end">
+    @Html.ActionLink("Add", "Index", "Home")
+</button>
