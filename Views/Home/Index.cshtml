@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome, to the Security Admin Portal</h1>
+    <img class="align-content-center" src="~/logo.png" img-responsive="fluid"/>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col justify-content-center">
+            <button type="submit" class="btn btn-dark text-white">
+                @Html.ActionLink("DashBoard", "Location", "location")
+            </button>
+        </div>
+        <div class="col justify-content-center">
+            <button type="submit" class="btn btn-dark text-white">
+                @Html.ActionLink("Notes", "Note", "Note")
+            </button>
+        </div>
+        <div class="col justify-content-center">
+            <button type="submit" class="btn btn-dark text-white">
+                @Html.ActionLink("Incidents", "Incident", "Incident")
+            </button>
+        </div>
+        <div class="col justify-content-center">
+            <button type="submit" class="btn btn-dark text-white">
+                @Html.ActionLink("Teams", "Team", "Team")
+            </button>
+        </div>
+        <div class="col justify-content-center">
+            <button type="submit" class="btn btn-dark text-white">
+                @Html.ActionLink("Meet", "Meeting", "Meeting")
+            </button>
+        </div>
+    </div>
+</div>
+
