@@ -12,6 +12,7 @@
                         <th>User</th>
                         <th>Email</th>
                         <th>Team</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -19,6 +20,7 @@
                         <td>Q</td>
                         <td>Q@gmail.com</td>
                         <td>Alpha</td>
+                        <td><a asp-controller="Team" asp-action="Assign" asp-route-id="">Assign to team</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -29,6 +31,6 @@
     @Html.ActionLink("Home", "Index", "Home")
 </button>
 <button type="submit" class="btn btn-dark justify-content-end">
-    @Html.ActionLink("Add", "Index", "Home")
+    @Html.ActionLink("Add", "Add", "Team")
 </button>
 

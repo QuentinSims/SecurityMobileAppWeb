@@ -1,0 +1,16 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Assign User";
+}
+
+<h1>New team</h1>
+@using (Html.BeginForm("Detail", "Note"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Team)
+        @Html.TextBoxFor(m => m.Team, new { @class = "form-control"})
+    </div>
+    <button type="submit" class="btn btn-dark justify-content-end">
+    @Html.ActionLink("Add new team", "Team", "Team")
+    </button>
+}
