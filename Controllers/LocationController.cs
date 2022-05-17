@@ -8,5 +8,6 @@ namespace SecurityMobileAppWeb.Controllers
         {
             return View();
         }
+
     }
 }

@@ -15,6 +15,8 @@
                         <th>Date of Incident</th>
                         <th>Location of Incident</th>
                         <th>Description of Incident</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,6 +27,12 @@
                         <td>18 May</td>
                         <td>lat: 33.9698, lng: 25.4937</td>
                         <td>This is a very important note</td>
+                        <td>
+                            <a asp-controller="Incident" asp-action="Detail" asp-route-id="">View Details</a>
+                        </td>
+                        <td>
+                            <a asp-controller="Incident" asp-action="Delete" asp-route-id="">Delete</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -33,7 +41,4 @@
 </div>
 <button type="submit" class="btn btn-dark">
     @Html.ActionLink("Home", "Index", "Home")
-</button>
-<button type="submit" class="btn btn-dark justify-content-end">
-    @Html.ActionLink("Add", "Index", "Home")
 </button>

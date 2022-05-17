@@ -1,0 +1,33 @@
+﻿@model Incident 
+@{
+    ViewData["Title"] = "Details of Note";
+}
+
+<h1>Note Detail</h1>
+@using (Html.BeginForm("Detail", "Note"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Status)
+        @Html.TextBoxFor(m => m.Status, new { @class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Title)
+        @Html.TextBoxFor(m => m.Title, new { @class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DateOfIncidentUtc)
+        @Html.TextBoxFor(m => m.DateOfIncidentUtc, new { @class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LocationOfIncident)
+        @Html.TextBoxFor(m => m.LocationOfIncident, new { @class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DescriptionOfIncident)
+        @Html.TextBoxFor(m => m.DescriptionOfIncident, new { @class = "form-control"})
+    </div>
+    
+    <button type="submit" class="btn btn-dark">
+    @Html.ActionLink("Update", "Incident", "Incident")
+    </button>
+}
