@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Note
+@{
     ViewData["Title"] = "Notes for Users";
 }
 
@@ -13,6 +14,8 @@
                         <th>Title</th>
                         <th>Date of Note</th>
                         <th>Description of Note</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -21,6 +24,12 @@
                         <td>Important</td>
                         <td>18 May</td>
                         <td>This is a very important note</td>
+                        <td>
+                            <a asp-controller="Note" asp-action="Detail" asp-route-id="">View Details</a>
+                        </td>
+                        <td>
+                            <a asp-controller="Note" asp-action="Delete" asp-route-id="">Delete</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -31,5 +40,5 @@
     @Html.ActionLink("Home", "Index", "Home")
 </button>
 <button type="submit" class="btn btn-dark justify-content-end">
-    @Html.ActionLink("Add", "Index", "Home")
+    @Html.ActionLink("Add", "Add", "Note")
 </button>

@@ -8,5 +8,17 @@ namespace SecurityMobileAppWeb.Controllers
         {
             return View();
         }
+        public IActionResult Add()
+        {
+            return View();
+        }
+        public IActionResult Detail()
+        {
+            return View();
+        }
+        public IActionResult Delete()
+        {
+            return View();
+        }
     }
 }
