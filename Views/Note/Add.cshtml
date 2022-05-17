@@ -1,0 +1,25 @@
+﻿@model Note
+@{
+    ViewData["Title"] = "New Note";
+}
+
+<h1>New Note</h1>
+@using (Html.BeginForm("Detail", "Note"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Title)
+        @Html.TextBoxFor(m => m.Title, new { @class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DateOfNote)
+        @Html.TextBoxFor(m => m.DateOfNote, new { @class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DescriptionOfNote)
+        @Html.TextBoxFor(m => m.DescriptionOfNote, new { @class = "form-control"})
+    </div>
+    
+    <button type="submit" class="btn btn-dark">
+    @Html.ActionLink("Save", "Note", "Note")
+    </button>
+}
