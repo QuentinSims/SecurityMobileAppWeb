@@ -33,6 +33,11 @@ builder.Services.AddControllersWithViews(options =>
 builder.Services.AddRazorPages()
     .AddMicrosoftIdentityUI();
 
+//add configuration for dependency injection for services
+builder.Services.AddSingleton<IIncident, IncidentService>();
+builder.Services.AddSingleton<INote, NoteService>();
+builder.Services.AddSingleton<ILocation, LocationService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

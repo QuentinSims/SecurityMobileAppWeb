@@ -4,6 +4,7 @@ namespace SecurityMobileAppWeb.Controllers
 {
     public class TeamController : Controller
     {
+
         public IActionResult Team()
         {
             return View();
